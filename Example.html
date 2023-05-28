@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timeout Dialog Example</title>
+    <script type="text/javascript">
+        // Place the JavaScript code here
+        // ...
+
+        // The TimeoutDialog initialization
+        window.addEventListener('DOMContentLoaded', function () {
+            TimeoutDialog.initialize({
+                timeout: 300000,
+                countdown: 60000,
+                logoutButton: '#logoutButton',
+                keepAliveUrl: '/keep-alive',
+                logoutUrl: '/logout'
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="logoutButton">Logout</button>
+</body>
+</html>
