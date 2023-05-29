@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="session-timeout.css">
+  <script src="session-timeout.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        sessionTimeout({
+            message: 'Your session is about to expire.',
+            keepAliveUrl: '/keep-alive',
+            keepAliveAjaxRequestType: 'POST',
+            redirUrl: '/timed-out',
+            logoutUrl: '/log-out',
+            warnAfter: 900000, // 15 minutes
+            redirAfter: 1200000, // 20 minutes
+            appendTime: true // appends time stamp to keep alive url to prevent caching
+        });
+    });
+</script>
+</head>
+<body>
+  <!-- Your JSP content goes here -->
+</body>
+</html>
