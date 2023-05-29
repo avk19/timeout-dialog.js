@@ -1,0 +1,28 @@
+.session-timeout-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.session-timeout-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.session-timeout-modal-actions {
+  margin-top: 20px;
+}
+
+.session-timeout-btn-continue,
+.session-timeout-btn-logout {
+  margin-right: 10px;
+}
