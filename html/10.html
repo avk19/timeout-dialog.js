@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="session-timeout.css">
+  <script src="session-timeout.js"></script>
+  <script>
+    // Initialize session timeout with custom options
+    window.sessionTimeout.initialize({
+      warningDuration: 300000, // 5 minutes
+      sessionTimeoutDuration: 600000, // 10 minutes
+      logoutUrl: '/logout'
+    });
+  </script>
+</head>
+<body>
+  <!-- Your JSP content goes here -->
+</body>
+</html>
