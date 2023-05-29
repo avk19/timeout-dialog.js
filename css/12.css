@@ -1,0 +1,13 @@
+#sessionTimeout-dialog {
+    display: none;
+}
+
+#sessionTimeout-dialog p {
+    margin: 0 0 10px;
+}
+
+#sessionTimeout-dialog #sessionTimeout-counter {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
