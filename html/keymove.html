@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Movement and Random Typing Simulation</title>
+  <script>
+    function simulateMouseMovement() {
+      var body = document.body;
+      var docEl = document.documentElement;
+      var maxX = Math.max(body.scrollWidth, docEl.scrollWidth);
+      var maxY = Math.max(body.scrollHeight, docEl.scrollHeight);
+
+      var mouseX = Math.floor(Math.random() * maxX);
+      var mouseY = Math.floor(Math.random() * maxY);
+
+      var event = document.createEvent("MouseEvents");
+      event.initMouseEvent(
+        "mousemove",
+        true,
+        true,
+        window,
+        0,
+        mouseX,
+        mouseY,
+        mouseX,
+        mouseY,
+        false,
+        false,
+        false,
+        false,
+        0,
+        null
+      );
+
+      body.dispatchEvent(event);
+    }
+
+    function simulateRandomTyping() {
+      var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      var randomChar = characters.charAt(Math.floor(Math.random() * characters.length));
+
+      var event = document.createEvent("Event");
+      event.initEvent("keydown", true, true);
+      event.keyCode = randomChar.charCodeAt(0);
+	console.log(event.keyCode);
+
+      document.dispatchEvent(event);
+    }
+
+    setInterval(simulateMouseMovement, 2000);
+    setInterval(simulateRandomTyping, 1000);
+  </script>
+</head>
+<body>
+  <h1>Mouse Movement and Random Typing Simulation</h1>
+  <!-- Add any other HTML content here -->
+</body>
+</html>
